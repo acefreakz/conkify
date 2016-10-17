@@ -1,0 +1,35 @@
+conky.config = {
+	-- Props
+	alignment = 'middle_middle',
+	background = false,
+	draw_borders = false,
+	draw_graph_borders = false,
+	draw_outline = false,
+	draw_shades = false,
+	use_xft = true,
+	font = 'DejaVu Sans Mono:pixelsize=12',
+	out_to_console = false,
+	out_to_stderr = false,
+	extra_newline = false,
+	own_window = true,
+	own_window_type = 'normal',
+	own_window_class = 'Conky',
+	own_window_hints = 'undecorated,below,sticky,skip_pager,skip_taskbar',
+	own_window_transparent = true,
+	double_buffer = true,
+	uppercase = true,
+	show_graph_scale = false,
+	show_graph_range = false,
+	gap_x = 0,
+	gap_y = 50,
+	maximum_width=1890,
+	minimum_width=500,
+	update_interval = 1.0,
+	-- Color
+	default_color = 'white',
+	default_outline_color = 'white'
+}
+
+conky.text = [[
+${voffset}${font DejaVu Sans Mono:pixelsize=80}${time %H:%M}${voffset -38}${color eab553}${font DejaVu Sans Mono:bold:pixelsize=29}${time %d}${voffset -7}$color${font DejaVu Sans Mono:bold:pixelsize=20}${time %B} ${time %Y}${voffset 25}${font DejaVu Sans Mono:pixelsize=42}${offset -176}${time %A}${font}
+]]
