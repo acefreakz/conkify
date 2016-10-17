@@ -30,6 +30,8 @@ conky.config = {
 	-- Color
 	default_color = 'white',
 	default_outline_color = 'white',
+	color1 = 'blue',
+	color2 = 'red',
 	-- abc
         cpu_avg_samples = 2,
 	net_avg_samples = 2,
@@ -49,13 +51,13 @@ ${color grey}${swapbar}
 ${voffset 5}${font 'DejaVu Sans Mono':bold:size=10}${color eab553}FILE SYSTEM ${hr 2}${font}
   ${color grey}/dev/sda1 $color${fs_used /}/${fs_size /} ${color grey}${fs_bar}
     ${color grey}/ Disk IO: $color${diskio /dev/sda1}${alignr 1}${color grey}Temp: +${color}${texeci 10 hddtemp /dev/sda1 -n}°C
-  $alignr${color grey}${diskiograph 20,350 2DF822 C20D0B 2441KiB -t -1}
+  $alignr${color grey}${diskiograph 20,350 2DF822 C20D0B 1000KiB -t -1}
 ${voffset 2}${font 'DejaVu Sans Mono':bold:size=10}${color eab553}NETWORK(WiFi) ${hr 2}$font
   ${color grey}/ SSID: ${if_existing /proc/net/route wlx14cc2018536d}${color}${wireless_essid}(${wireless_link_qual_perc wlx14cc2018536d}%)$else${color red}NOT CONNECTED$endif${alignr 1}${color grey}Bitrate: $color${wireless_bitrate wlx14cc2018536d}
     ${color grey}/ LAN IP: ${if_existing /proc/net/route wlx14cc2018536d}$color${addr wlx14cc2018536d}$else${color red}DOWN$endif
     ${color grey}/ WAN IP: ${if_existing /proc/net/route wlx14cc2018536d}$color${texeci 60 wget http://ipinfo.io/ip -qO -}$else${color red}DOWN$endif
     ${color grey}/ Up:$color ${upspeed wlx14cc2018536d}$alignr${color grey}Down:$color ${downspeed wlx14cc2018536d}
-  ${upspeedgraph wlx14cc2018536d 20,150 2DF822 C20D0B 1220KiB -t -1}$alignr${downspeedgraph wlx14cc2018536d 20,150 2DF822 C20D0B 2441KiB -t -1}
+  ${upspeedgraph wlx14cc2018536d 20,150 2DF822 C20D0B 1000KiB -t -1}$alignr${downspeedgraph wlx14cc2018536d 20,150 2DF822 C20D0B 1000KiB -t -1}
 ${voffset 2}${font 'DejaVu Sans Mono':bold:size=10}${color eab553}PROCESSES ${hr 2}${font}
 ${color grey}Total: $color$processes ${color grey}Running: $color$running_processes
 ${voffset 5}${color eab553}Name             PID     CPU%   MEM%
