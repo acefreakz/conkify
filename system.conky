@@ -84,4 +84,5 @@ ${tcp_portmon 32768 61000 rip 0} ${tcp_portmon 32768 61000 rport 0}:${tcp_portmo
 ${tcp_portmon 32768 61000 rip 1} ${tcp_portmon 32768 61000 rport 1}:${tcp_portmon 32768 61000 lport 1} ${alignr} ${tcp_portmon 32768 61000 rservice 1}
 ${tcp_portmon 32768 61000 rip 2} ${tcp_portmon 32768 61000 rport 2}:${tcp_portmon 32768 61000 lport 2} ${alignr} ${tcp_portmon 32768 61000 rservice 2}
 ${tcp_portmon 32768 61000 rip 3} ${tcp_portmon 32768 61000 rport 3}:${tcp_portmon 32768 61000 lport 3} ${alignr} ${tcp_portmon 32768 61000 rservice 3}
+${color1}IPcam1: ${color}${texeci 60 curl -I -u admin:admin 192.168.0.7 2>/dev/null | head -n 1 | sed 's/.$//'}
 ]]

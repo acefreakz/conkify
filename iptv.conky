@@ -1,0 +1,28 @@
+conky.config = {
+	-- Props
+	alignment = 'middle_left',
+	background = true,
+	draw_borders = false,
+	out_to_console = false,
+	out_to_stderr = false,
+	extra_newline = false,
+	own_window = true,
+	own_window_type = 'normal',
+	own_window_class = 'Conky',
+	own_window_hints = 'undecorated,below,sticky,skip_pager,skip_taskbar',
+	own_window_transparent = true,
+	double_buffer = true,
+	uppercase = true,
+        minimum_width = 950,
+	minimum_height = 400,
+	gap_x = 0,
+	gap_y = 0,
+	update_interval = 5.0,
+	-- Color
+	default_color = 'white',
+	default_outline_color = 'white'
+}
+
+conky.text = [[
+${texeci 2 bash updateLatestAlarmImage.sh}${image latestAlarmImage -p 350,0 -s 600x400 -n}
+]]

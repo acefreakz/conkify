@@ -1,6 +1,6 @@
 conky.config = {
 	-- Props
-	alignment = 'middle_middle',
+	alignment = 'top_middle',
 	background = false,
 	draw_borders = false,
 	draw_graph_borders = false,
@@ -21,8 +21,8 @@ conky.config = {
 	show_graph_scale = false,
 	show_graph_range = false,
 	gap_x = 0,
-	gap_y = 50,
-	maximum_width=1890,
+	gap_y = 0,
+	maximum_width=500,
 	minimum_width=500,
 	update_interval = 1.0,
 	-- Color
