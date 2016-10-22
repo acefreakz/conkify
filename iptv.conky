@@ -24,5 +24,5 @@ conky.config = {
 }
 
 conky.text = [[
-${texeci 2 bash updateLatestAlarmImage.sh}${image latestAlarmImage -p 350,0 -s 600x400 -n}
+${texeci 2 bash updateLatestAlarmImage.sh}${image .latestAlarmImage -p 350,0 -s 600x400 -n}
 ]]
