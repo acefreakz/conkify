@@ -28,10 +28,10 @@ conky.config = {
 	show_graph_range = false,
 	override_utf8_locale = true,
 	-- Color
-	default_color = 'white',
+	default_color = '2dbfff',
 	default_outline_color = 'white',
-	color1 = 'grey',
-	color2 = 'eab553',
+	color1 = '7db1b2',
+	color2 = 'ccdaee',
 	-- abc
         cpu_avg_samples = 2,
 	net_avg_samples = 2,
@@ -42,12 +42,12 @@ conky.config = {
 conky.text = [[
 ${color1}Node: ${color}$nodename $alignr${color1}Uptime: $color$uptime
 ${voffset 5}${font 'DejaVu Sans Mono':bold:size=10}${color2}PROCESSOR$alignr$font$color${cpu cpu0}%
-${color1}${cpubar}
+${color}${cpubar}
 ${font}${color1}Load: $color${loadavg}${alignr 1}${color1}CPU0/1: $color${texeci 10 sensors | grep "Core 0" | awk '{print $3}'}°C/${texeci 30 sensors | grep "Core 1" | awk '{print $3}'}°C
 ${voffset 5}${font 'DejaVu Sans Mono':bold:size=10}${color2}MEMORY$alignc$font$color$mem/$memmax$alignr$memperc%
-${color1}${membar}
+${color}${membar}
 ${voffset 5}${font 'DejaVu Sans Mono':bold:size=10}${color2}SWAP$alignc$font$color$swap/$swapmax$alignr$swapperc%
-${color1}${swapbar}
+${color}${swapbar}
 ${voffset 5}${font 'DejaVu Sans Mono':bold:size=10}${color2}FILE SYSTEM ${hr 2}${font}
   ${color1}/dev/sda1 $color${fs_used /}/${fs_size /} ${color1}${fs_bar}
     ${color1}/ Disk IO: $color${diskio /dev/sda1}${alignr 1}${color1}Temp: +${color}${texeci 10 hddtemp /dev/sda1 -n}°C
@@ -59,7 +59,7 @@ ${voffset 2}${font 'DejaVu Sans Mono':bold:size=10}${color2}NETWORK(WiFi) ${hr 2
   ${upspeedgraph wlx14cc2018536d 20,150 2DF822 C20D0B 1000KiB -t -1}$alignr${downspeedgraph wlx14cc2018536d 20,150 2DF822 C20D0B 1000KiB -t -1}
 ${voffset 2}${font 'DejaVu Sans Mono':bold:size=10}${color2}PROCESSES ${hr 2}${font}
 ${color1}Total: $color$processes ${color1}Running: $color$running_processes
-${voffset 5}${color2}Name             PID     CPU%   MEM%
+${voffset 5}${color2}Name               PID   CPU%   MEM%
 ${color}${top name 1} ${top pid 1} ${top cpu 1} ${top mem 1}
 ${color}${top name 2} ${top pid 2} ${top cpu 2} ${top mem 2}
 ${color}${top name 3} ${top pid 3} ${top cpu 3} ${top mem 3}
