@@ -6,5 +6,5 @@ conky -q -c system.conky &
 sleep 1
 conky -q -c clock.conky &
 sleep 1
-conky -q -c iptv.conky &
+conky -q -c ipcam.conky &
 exit
